@@ -272,3 +272,20 @@ h1 {
 #footer p {
   margin: 0; /* Remove margem padrão do parágrafo */
 }
+
+/* CONFIGURAÇÃO USO NO CELULAR */
+
+@media only screen and (max-width: 768px) {
+  /* Estilos para dispositivos menores que 768px de largura */
+}
+
+@media only screen and (max-width: 480px) {
+  /* Estilos para dispositivos menores que 480px de largura */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* FIM CONFIGURAÇÃO USO NO CELULAR */
