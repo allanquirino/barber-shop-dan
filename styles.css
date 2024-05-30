@@ -275,13 +275,16 @@ h1 {
 
 /* CONFIGURAÇÃO USO NO CELULAR */
 
-@media only screen and (max-width: 768px) {
-  /* Estilos para dispositivos menores que 768px de largura */
+/* Estilos para telas pequenas (celulares) */
+@media only screen and (max-width: 600px) {
+  /* Insira seus estilos para telas pequenas aqui */
 }
 
-@media only screen and (max-width: 480px) {
-  /* Estilos para dispositivos menores que 480px de largura */
+/* Estilos para telas médias e grandes */
+@media only screen and (min-width: 601px) {
+  /* Insira seus estilos para telas médias e grandes aqui */
 }
+
 
 img {
   max-width: 100%;
