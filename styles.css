@@ -1,0 +1,274 @@
+/* Reset básico */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para o body e html */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para o top bar */
+#topbar {
+    background-color: #333; /* Cor de fundo do top bar */
+    color: #fff; /* Cor do texto do top bar */
+    padding: 10px 0; /* Espaçamento interno do top bar */
+}
+
+#topbar .container {
+    display: flex;
+    justify-content: center;
+}
+
+#topbar .contact-info {
+    display: flex;
+    align-items: center;
+}
+
+#topbar .contact-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espaçamento entre os itens */
+}
+
+#topbar .contact-item:last-child {
+    margin-right: 0; /* Remove margem à direita do último item */
+}
+
+#topbar .contact-item img {
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* Imagens top bar */
+.icone-instagram, .icone-booksy, .icone-telefone {
+    height: 30px;
+}
+/* Fim imagens top bar */
+
+/* HEADER */
+.barber {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo no topo */
+    width: 100%;
+}
+/* Fim HEADER */
+
+a {
+    color: #fff;
+}
+
+/* HOME */
+#home {
+    width: 100%;
+    height: 40vh; /* aqui eram 60vh */
+    background: url("../img/DL_EFT2.jpg") top center;
+    background-size: cover;
+    position: relative;
+}
+
+#home:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#home .home-container {
+    position: absolute;
+    bottom: 0;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: top;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 15px;
+}
+
+#home h1 {
+    margin: 0 0 10px 0;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 56px;
+    color: #d6d6d6;
+    letter-spacing: 10px;
+}
+
+#home h2 {
+    color: #d6d6d6;
+    margin-bottom: 35px;
+    font-size: 25px;
+    font-weight: 200;
+    letter-spacing: 10px;
+}
+
+#home .btn-get-started {
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #ffd100;
+    color: #d6d6d6;
+}
+
+@media (max-width: 768px) {
+    #home {
+        height: 100vh;
+        letter-spacing: 0px;
+    }
+
+    #home h1 {
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: 0px;
+    }
+
+    #home h2 {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 30px;
+        letter-spacing: 0px;
+    }
+}
+/* FIM HOME */
+
+/* COMMENTS */
+
+#com-client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-top: 3%;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cliente-img-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.cliente-img-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* CSS para os slides e a navegação */
+
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto; /* Adiciona uma barra de rolagem horizontal caso o conteúdo seja maior que a largura */
+  scroll-snap-type: x mandatory; /* Faz com que cada slide "agrupe" junto ao se rolar */
+}
+
+.slides .slide {
+  flex: 0 0 auto; /* Impede que as imagens se estiquem para preencher o espaço */
+  margin-right: 20px; /* Adiciona uma margem à direita de 20px entre cada slide */
+}
+
+.slides .slide:last-child {
+  margin-right: 0; /* Remove a margem à direita do último slide para evitar espaçamento extra */
+}
+
+.slides .slide img {
+  max-width: 300px; /* Define a largura máxima das imagens */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.navigation {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+/*
+.nav-button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+*/
+input[name="slider"]:nth-child(1):checked ~ .slides {
+  transform: translateX(0%);
+}
+
+input[name="slider"]:nth-child(2):checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+input[name="slider"]:nth-child(3):checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+input[name="slider"]:nth-child(4):checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+input[name="slider"]:nth-child(5):checked ~ .slides {
+  transform: translateX(-400%);
+}
+
+input[name="slider"]:nth-child(1):checked ~ .navigation .nav-button:nth-child(1),
+input[name="slider"]:nth-child(2):checked ~ .navigation .nav-button:nth-child(2),
+input[name="slider"]:nth-child(3):checked ~ .navigation .nav-button:nth-child(3),
+input[name="slider"]:nth-child(4):checked ~ .navigation .nav-button:nth-child(4),
+input[name="slider"]:nth-child(5):checked ~ .navigation .nav-button:nth-child(5) {
+  background-color: #000;
+}
+
+/* FIM COMMENTS */
+
+/* Texto H1 geral */
+h1 {
+  font-size: 3em; /* Tamanho da fonte */
+  color: #000000; /* Cor do texto */
+  margin-bottom: 0px; /* Espaçamento inferior */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra do texto */
+  font-weight: "Roboto", sans-serif; /* Peso da fonte */
+  letter-spacing: 1px; /* Espaçamento entre letras */
+}
+
+#footer {
+  background-color: #333; /* Cor de fundo do rodapé */
+  color: #fff; /* Cor do texto do rodapé */
+  padding: 10px 0; /* Espaçamento interno do rodapé */
+  text-align: center; /* Alinhar texto ao centro */
+  margin-top: 50px;
+}
+
+#footer p {
+  margin: 0; /* Remove margem padrão do parágrafo */
+}
